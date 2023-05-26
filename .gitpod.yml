@@ -1,6 +1,10 @@
 image:
   file: .gitpod.Dockerfile
 
+tasks:
+  - name: Run Shell
+    init: |
+      rustup uninstall stable && rustup install stable && cargo check
 vscode:
   extensions:
     - bbenoist.Nix
